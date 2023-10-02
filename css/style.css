@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(219, 219, 210);
+}
 /* 
 rgba(0, 150, 136,1)
 rgba(219, 219, 210, 1)
@@ -8,4 +10,15 @@ rgba(219, 219, 210, 1)
     margin: 0 auto;
     width: 80%;
     height: 850px;
+}
+img{
+    width: 50px;
+}
+.user{
+    background-color: #eaeaea;
+}
+
+.option i{
+    margin-right: 10px ;
+    color: #b1b1b1;
 }
