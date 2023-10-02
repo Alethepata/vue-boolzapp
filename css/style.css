@@ -1,4 +1,6 @@
 body{
+    overflow: hidden;
+    height: 100vh;
     background-color: rgb(219, 219, 210);
 }
 /* 
@@ -14,8 +16,9 @@ rgba(219, 219, 210, 1)
 .container_custom{
     margin: 0 auto;
     width: 80%;
-    height: 870px;
+    
 }
+
 .avatar img{
     width: 50px;
 }
@@ -45,8 +48,10 @@ rgba(219, 219, 210, 1)
     background-color: #eaeaea;
 }
 
+
+
 .contact img{
-    width: 70px;
+    width: 60px;
 }
 .contact span{
     color: #c2b8bf;
