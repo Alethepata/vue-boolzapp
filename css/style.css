@@ -6,6 +6,11 @@ rgba(0, 150, 136,1)
 rgba(219, 219, 210, 1)
 */
 
+
+:root{
+    --light-blue: #8edafc;
+}
+
 .container_custom{
     margin: 0 auto;
     width: 80%;
@@ -21,4 +26,16 @@ img{
 .option i{
     margin-right: 10px ;
     color: #b1b1b1;
+}
+
+.allert{
+    background-color: var(--light-blue);
+}
+
+.allert i{
+    color:var(--light-blue);
+}
+
+.allert-text{
+    line-height: 10px;
 }
