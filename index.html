@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="container_custom my-5 bg-light ">
+    <div id="app" class="container_custom my-5 bg-light ">
 
             <div class="row m-0">
                 <div class=" col-5 p-0">
@@ -59,13 +59,20 @@
 
                     <div class="contacts bg-light overflow-y-scroll">
 
-                        <div class="contact  border-bottom border-top d-flex position-relative">
+                        <div 
+                        v-for="contact in contacts"
+                        class="contact  border-bottom border-top d-flex position-relative"
+                        >
 
-                            <div class="avatar-img p-3 ">
-                                <img class="rounded-circle me-3  " src="img/avatar_1.jpg" alt="">
+                            <div class="avatar-img p-2 ">
+                                <img 
+                                class="rounded-circle me-3 " 
+                                :src="contact.avatar" 
+                                alt="{{contact.name}}"
+                                >
                             </div>
-                            <div class="contact-text mt-2">
-                                <h4>Michele</h4>
+                            <div class="contact-text mt-1">
+                                <h4>{{contact.name}}</h4>
                                 <span class="fw-semibold">
                                     Ultimo messaggio inviato
                                 </span>
