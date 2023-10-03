@@ -167,6 +167,21 @@ createApp({
                 }
             ],
             counter:0,
+            newMessages:''
         } 
+    },
+    methods:{
+        enter(){
+            const newMessage ={
+                message: this.newMessages,
+                status: 'sent'
+            }
+
+            this.contacts.forEach((contact) => {
+             contact.messages.push(newMessage)   
+            });
+            
+            this.newMessages=''
+        }
     }
 }).mount('#app')
