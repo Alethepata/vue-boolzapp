@@ -37,4 +37,23 @@
   - se lo status del messaggio è sent verrà aggiunta la classe sent
   - se lo status del messaggio è received verrà aggiunta la classe received
 
+3. aggiungere un counter:
 
+  - se l'indice è divero dal counter l'elemento non verrà mostrato
+  - quando clicco una conversazione il counter diventa uguale all'indice dei contact  
+
+#
+
+**Milestone 3**
+
+- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo     viene aggiunto al thread sopra, come messaggio verde
+
+-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+1. v-model di un nuovo oggetto 
+
+2. quando si preme il tasto enter si fa il push() del nuovo oggetto dentro contacts
+
+3. creare un'altro ogetto con la risposta dell'utente 
+
+4. fare partire un setTimeout, dopo che sarà passato un secondo si fa il push() del nuovo oggetto dentro contacts  
