@@ -106,28 +106,23 @@
 
             </div>
 
-            <div class="messages p-5 ">
-                
-                <div class="sent rounded-3 p-3 position-relative">
-                    <span>
-                        Hai portato a spasso il cane?
-                    </span>
-                    <span class="time-message">15:30</span>
-                </div>
-                <div class="sent rounded-3 p-sm-3 position-relative">
-                    <span>
-                        Ricordati di stendere i panni
-                    </span>
-                    <span class="time-message">15:50</span>
-                </div>
-                <div class="received rounded-3 p-3 position-relative">
-                    <span>
-                        Tutto fatto!
-                    </span>
-                    <span class="time-message">16:15</span>
+               <div class="messages p-5 ">
+                   
+                <div v-for="contact in contacts">
+                    <div
+                    v-for="message in contact.messages"
+                    :class="[{'sent' : message.status === 'sent'}, {'received' : message.status === 'received'},{'d-none' : contact.visible === false}]"
+                     class="rounded-3 p-3 position-relative">
+                        <span
+                        :class=""
+                        >
+                            {{message.message}}
+                        </span>
+                        <span class="time-message">15:30</span>
+                    </div>
                 </div>
 
-            </div>
+               </div>
 
             <div class="textbar d-flex justify-content-between align-items-center">
 
