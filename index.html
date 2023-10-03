@@ -10,87 +10,137 @@
     <title>Boolzapp</title>
 </head>
 <body>
+    <div id="app" class="container bg-light  p-0 mt-5 custom">
+        
+        <div class="leftbar">
 
-    <div id="app" class="container_custom my-5 bg-light ">
+            <div class="user d-flex align-items-center justify-content-between">
 
-            <div class="row m-0">
-                <div class=" col-5 p-0">
+                <div class="avatar d-flex align-items-center">
+                    <img class="rounded-circle ms-2 " src="img/avatar_io.jpg" alt="">
+                    <h5>Sofia</h5>
+                </div>
 
-                    <div class="user d-flex align-items-center p-2 justify-content-between">
+                <div class="option fs-4">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
 
-                        <div class="avatar d-flex align-items-center">
-                            <img class="rounded-circle " src="img/avatar_io.jpg" alt="">
-                            <h5>Sofia</h5>
-                        </div>
+            </div>
 
-                        <div class="option fs-4">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
+            <div class="allert d-flex">
 
-                    </div>
+                <div class="bell rounded-circle bg-light fs-4 ms-2 my-3">
+                    <i class="fa-regular fa-bell-slash"></i>
+                </div>
 
-                    <div class="allert d-flex p-3 ">
-
-                        <div class="bell rounded-circle bg-light p-2 fs-4">
-                            <i class="fa-regular fa-bell-slash"></i>
-                        </div>
-
-                        <div class="allert-text ms-3">
-                            <h5>
-                                Ricevi notifiche di nuovi messaggi
-                            </h5>
-                            <span class="text-decoration-underline">
-                                Attiva notifiche desktop
-                            </span>
+                <div class="allert-text ms-3 my-3">
+                    <h5>
+                        Ricevi notifiche di nuovi messaggi
+                    </h5>
+                    <span class="text-decoration-underline">
+                        Attiva notifiche desktop
+                    </span>
 
 
-                        </div>
+                </div>
 
-                    </div>
+            </div>
 
-                    <div class="search m-2 bg-light-subtle">
+            <div class="search bg-light-subtle">
+                <i class="fa-solid fa-magnifying-glass px-4"></i>
+                <input class="border-0 border-start  w-50 ps-2 " type="text" placeholder="Cerca o inizia una nuova chat">
 
-                        <i class="fa-solid fa-magnifying-glass px-4"></i>
-                        <input class="border-0 border-start  w-50 ps-2 " type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
 
-                    </div>
+            <div class="contacts bg-light overflow-y-scroll">
 
-                    <div class="contacts bg-light overflow-y-scroll">
+                <div 
+                v-for="contact in contacts"
+                class="contact  border-bottom border-top d-flex position-relative"
+                >
 
-                        <div 
-                        v-for="contact in contacts"
-                        class="contact  border-bottom border-top d-flex position-relative"
+                    <div class="avatar-img p-2 ">
+                        <img 
+                        class="rounded-circle me-3 " 
+                        :src="contact.avatar" 
+                        alt="{{contact.name}}"
                         >
-
-                            <div class="avatar-img p-2 ">
-                                <img 
-                                class="rounded-circle me-3 " 
-                                :src="contact.avatar" 
-                                alt="{{contact.name}}"
-                                >
-                            </div>
-                            <div class="contact-text mt-1">
-                                <h4>{{contact.name}}</h4>
-                                <span class="fw-semibold">
-                                    Ultimo messaggio inviato
-                                </span>
-                                <span class="time fw-semibold">12:00</span>
-                            </div>
-
-                        </div>
-
-
+                    </div>
+                    <div class="contact-text mt-1">
+                        <h4>{{contact.name}}</h4>
+                        <span class="fw-semibold">
+                            Ultimo messaggio inviato
+                        </span>
+                        <span class="time fw-semibold">12:00</span>
                     </div>
 
                 </div>
-                <div class="col p-0"></div>
+
+
             </div>
 
+        </div>
 
+
+        <div class="rightbar">
+
+            <div class="avatar-contact border-start d-flex align-items-center justify-content-between ps-2">
+
+                <div class="avatar d-flex align-items-center">
+                    <img class="rounded-circle " src="img/avatar_1.jpg" alt="">
+                    <div class="text-avatar-contact ms-2">
+                        <h5>Michele</h5>
+                        <span class="fw-semibold">
+                            Ultimo messaggio inviato
+                        </span>
+                    </div>
+                </div>
+
+                <div class="option fs-4">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+
+            </div>
+
+            <div class="message p-5 ">
+                <div class="message-user rounded-3 p-3 position-relative">
+                    <span>
+                        Hai portato a spasso il cane?
+                    </span>
+                    <span class="time-message">15:30</span>
+                </div>
+                <div class="message-user rounded-3 p-sm-3 position-relative">
+                    <span>
+                        Ricordati di stendere i panni
+                    </span>
+                    <span class="time-message">15:50</span>
+                </div>
+                <div class="message-contact rounded-3 bg-light p-3 position-relative">
+                    <span>
+                        Tutto fatto!
+                    </span>
+                    <span class="time-message">16:15</span>
+                </div>
+
+            </div>
+
+            <div class="textbar d-flex justify-content-between align-items-center">
+
+                <i class="fa-regular fa-face-smile ms-5"></i>
+                <input class="w-75 border rounded-3 py-1 px-2" type="text" placeholder="Scrivi un messaggio">
+                <i class="fa-solid fa-microphone me-5"></i>
+
+
+            </div>
+
+        </div>
 
     </div>
+
 
     <script src="js/script.js"></script>
 </body>
