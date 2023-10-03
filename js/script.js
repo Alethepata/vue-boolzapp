@@ -178,7 +178,10 @@ createApp({
             }
 
             this.contacts.forEach((contact) => {
-             contact.messages.push(newMessage)   
+                if(newMessage.message.length > 0){
+                   
+                }
+               contact.messages.push(newMessage)  
             });
             
             this.newMessages=''
