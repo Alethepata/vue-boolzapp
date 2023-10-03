@@ -182,6 +182,22 @@ createApp({
             });
             
             this.newMessages=''
+
+            setTimeout(() =>{
+                this.answer()
+            },1000)
+        },
+        answer(){
+
+            const answer ={
+                message: 'ok',
+                status: 'received'
+            }
+
+            this.contacts.forEach((contact) => {
+             contact.messages.push(answer)   
+            });
+            
         }
     }
 }).mount('#app')
