@@ -179,13 +179,14 @@ createApp({
 
             this.contacts.forEach((contact) => {
                 if(newMessage.message.length > 0){
-                   
+                 contact.messages.push(newMessage)
                 }
-               contact.messages.push(newMessage)  
+                 
             });
             
             this.newMessages=''
 
+    
             setTimeout(() =>{
                 this.answer()
             },1000)
