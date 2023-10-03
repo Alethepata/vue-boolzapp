@@ -132,7 +132,7 @@
 
                 <i class="fa-regular fa-face-smile ms-5"></i>
                 <input 
-                v-model="newMessages"
+                v-model.trim="newMessages"
                 @keyup.enter="enter"
                 class="w-75 border rounded-3 py-1 px-2" 
                 type="text" 
