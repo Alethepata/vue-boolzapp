@@ -59,7 +59,7 @@
                 <div 
                 v-for="(contact, index) in contacts"
                 @click="contact.visible = !contact.visible"
-                :class="{'bg-black' : contact.visible == true}"
+                :class="{'selected' : contact.visible == true}"
                 class="contact  border-bottom border-top d-flex position-relative"
                 >
 
@@ -88,12 +88,16 @@
 
         <div class="rightbar">
 
-            <div class="avatar-contact border-start d-flex align-items-center justify-content-between ps-2">
+            <div
+            v-for="contact in contacts"
+            :class="{'d-none' : contact.visible === false}"
+            class="avatar-contact border-start d-flex align-items-center justify-content-between ps-2">
 
-                <div class="avatar d-flex align-items-center">
-                    <img class="rounded-circle " src="img/avatar_1.jpg" alt="">
+                <div
+                 class="avatar d-flex align-items-center">
+                    <img class="rounded-circle " :src="contact.avatar" alt="">
                     <div class="text-avatar-contact ms-2">
-                        <h5>Michele</h5>
+                        <h5>{{contact.name}}</h5>
                         <span class="fw-semibold">
                             Ultimo messaggio inviato
                         </span>
