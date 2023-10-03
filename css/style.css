@@ -3,11 +3,6 @@ body{
     height: 100vh;
     background: linear-gradient(rgb(0, 150, 136) 0px,  rgb(0, 150, 136) 15vh, rgb(219, 219, 210) 15vh, rgb(219, 219, 210) 100%);
 }
-/* 
-rgba(0, 150, 136,1)
-rgba(219, 219, 210, 1)
-*/
-
 
 :root{
     --light-blue: #8edafc;
@@ -101,19 +96,20 @@ rgba(219, 219, 210, 1)
     width:  60%;
 }
 
-.message{
+.messages{
     height: calc(100% - 130px);
     background-image: url(../img/mine.jpg);
     
 }
-.message-user{
+.sent{
     background-color: #d5f9ba;
     width: 40%;
     clear: both;
     float: right;
     margin-bottom: 20px;
 }
-.message-contact{
+.received{
+    background-color: white;
     width: 35%;
     clear: both;
     float: left;
