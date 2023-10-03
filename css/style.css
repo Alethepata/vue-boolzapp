@@ -128,6 +128,10 @@ body{
     height: 70px;
 }
 
+.selected{
+    background-color: #e9ebeb;
+}
+
 
 
 
