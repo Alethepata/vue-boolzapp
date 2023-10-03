@@ -58,8 +58,8 @@
 
                 <div 
                 v-for="(contact, index) in contacts"
-                @click="contact.visible = !contact.visible"
-                :class="{'selected' : contact.visible == true}"
+                @click="counter = index"
+                :class="{'selected' : index == counter}"
                 class="contact  border-bottom border-top d-flex position-relative"
                 >
 
@@ -89,8 +89,8 @@
         <div class="rightbar">
 
             <div
-            v-for="contact in contacts"
-            :class="{'d-none' : contact.visible === false}"
+            v-for="(contact,index) in contacts"
+            :class="{'d-none' : index !== counter}"
             class="avatar-contact border-start d-flex align-items-center justify-content-between ps-2">
 
                 <div
@@ -114,10 +114,10 @@
 
                <div class="messages p-5 ">
                    
-                <div v-for="contact in contacts">
+                <div v-for="(contact,index) in contacts">
                     <div
                     v-for="message in contact.messages"
-                    :class="[{'sent' : message.status === 'sent'}, {'received' : message.status === 'received'},{'d-none' : contact.visible === false}]"
+                    :class="[{'sent' : message.status === 'sent'}, {'received' : message.status === 'received'},{'d-none' : index !== counter}]"
                      class="rounded-3 p-3 position-relative">
                         <span>
                             {{message.message}}
