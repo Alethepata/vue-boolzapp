@@ -10,6 +10,7 @@ body{
 
 .custom{
     height: 90%;
+    cursor: pointer;
 }
 
 .leftbar,
@@ -97,6 +98,7 @@ body{
 }
 
 .messages{
+    overflow-y: scroll;
     height: calc(100% - 130px);
     background-image: url(../img/mine.jpg);
     
@@ -125,6 +127,7 @@ body{
 .textbar{
     height: 70px;
 }
+
 
 
 
