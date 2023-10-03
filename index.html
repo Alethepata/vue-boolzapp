@@ -57,7 +57,9 @@
             <div class="contacts bg-light overflow-y-scroll">
 
                 <div 
-                v-for="contact in contacts"
+                v-for="(contact, index) in contacts"
+                @click="contact.visible = !contact.visible"
+                :class="{'bg-black' : contact.visible == true}"
                 class="contact  border-bottom border-top d-flex position-relative"
                 >
 
@@ -113,9 +115,7 @@
                     v-for="message in contact.messages"
                     :class="[{'sent' : message.status === 'sent'}, {'received' : message.status === 'received'},{'d-none' : contact.visible === false}]"
                      class="rounded-3 p-3 position-relative">
-                        <span
-                        :class=""
-                        >
+                        <span>
                             {{message.message}}
                         </span>
                         <span class="time-message">15:30</span>
