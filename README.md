@@ -39,7 +39,7 @@
 
 3. aggiungere un counter:
 
-  - se l'indice è divero dal counter l'elemento non verrà mostrato
+  - se l'indice è diverso dal counter l'elemento non verrà mostrato
   - quando clicco una conversazione il counter diventa uguale all'indice dei contact  
 
 #
