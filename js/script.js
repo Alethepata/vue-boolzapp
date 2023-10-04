@@ -225,7 +225,11 @@ createApp({
         lastMessage(contact){
             return contact.messages.at(-1).message;
 
-        }
+        },
+        lastDate(contact){
+            return contact.messages.at(-1).date;
+
+        },
         
     }
 }).mount('#app')
