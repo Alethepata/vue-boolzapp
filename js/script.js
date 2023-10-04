@@ -197,7 +197,7 @@ createApp({
     methods:{
         enter(){
             const newMessage ={
-                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT),
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME),
                 time: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 message: this.newMessages,
                 status: 'sent'
