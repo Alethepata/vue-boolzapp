@@ -1,5 +1,7 @@
 const {createApp} = Vue;
 
+const dt = luxon.DateTime;
+
 createApp({
     data(){
         return{
@@ -174,6 +176,7 @@ createApp({
     methods:{
         enter(){
             const newMessage ={
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: this.newMessages,
                 status: 'sent'
             }
@@ -195,6 +198,7 @@ createApp({
         answer(){
 
             const answer ={
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: 'ok',
                 status: 'received'
             }
@@ -205,7 +209,7 @@ createApp({
             
         },
         search(){
-            
+
             const newContacts = [...this.contacts]
             newContacts.forEach((contact)=>{
                 const newName = [
