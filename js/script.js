@@ -221,6 +221,10 @@ createApp({
 
             })            
                 
+        },
+        lastMessage(contact){
+            return contact.messages.at(-1).message;
+
         }
         
     }
