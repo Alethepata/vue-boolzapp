@@ -80,7 +80,8 @@ body{
     width: 60px;
 }
 .contact span,
-.avatar-contact span{
+.avatar-contact span,
+.time-message{
     color: #c2b8bf;
 }
 

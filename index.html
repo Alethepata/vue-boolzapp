@@ -123,11 +123,11 @@
                     <div
                     v-for="message in contact.messages"
                     :class="[ message.status ,{'d-none' : index !== counter}]"
-                     class="rounded-3 p-3 position-relative">
+                     class="rounded-3 ps-3 pt-2 pb-4 position-relative">
                         <span>
                             {{message.message}}
                         </span>
-                        <span class="time-message">15:30</span>
+                        <span class="time-message fw-semibold">{{message.date}}</span>
                     </div>
                 </div>
 
