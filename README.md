@@ -48,7 +48,7 @@
 
 - Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo     viene aggiunto al thread sopra, come messaggio verde
 
--Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+- Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 1. v-model di un nuovo oggetto 
 
@@ -57,3 +57,23 @@
 3. creare un'altro ogetto con la risposta dell'utente 
 
 4. fare partire un setTimeout, dopo che sarà passato un secondo si fa il push() del nuovo oggetto dentro contacts  
+
+#
+
+**Milestone 4**
+
+- Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+1. aggiungo il v-model (newSearch)
+
+2. creo una copia dell'array contacts
+
+3. trasformo l'array copia in una stringa  
+
+4. trasformo newSearch in un'array 
+
+5. verifico se l'array copiato include newSearch:
+
+  - se include, contact.visible rimane true
+  - se non include, contact.visible diventa false 
+
