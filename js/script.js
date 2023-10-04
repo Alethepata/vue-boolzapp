@@ -217,7 +217,7 @@ createApp({
                 ]
             if(!newName.join().includes(this.newSearch.split('').join())){
                   contact.visible =false
-                }
+                }else if(this.newSearch === '')contact.visible =true 
 
             })            
                 
