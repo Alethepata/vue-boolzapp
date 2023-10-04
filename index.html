@@ -50,7 +50,12 @@
 
             <div class="search bg-light-subtle">
                 <i class="fa-solid fa-magnifying-glass px-4"></i>
-                <input class="border-0 border-start  w-50 ps-2 " type="text" placeholder="Cerca o inizia una nuova chat">
+                <input
+                v-model="newSearch"
+                class="border-0 border-start  w-75 ps-2 " 
+                type="text"
+                @keyup="search" 
+                placeholder="Cerca o inizia una nuova chat">
 
             </div>
 
@@ -59,7 +64,7 @@
                 <div 
                 v-for="(contact, index) in contacts"
                 @click="counter = index"
-                :class="{'selected' : index == counter}"
+                :class="[{'selected' : index == counter},{'d-none' : contact.visible == false}]"
                 class="contact  border-bottom border-top d-flex position-relative"
                 >
 
@@ -117,7 +122,7 @@
                 <div v-for="(contact,index) in contacts">
                     <div
                     v-for="message in contact.messages"
-                    :class="[{'sent' : message.status === 'sent'}, {'received' : message.status === 'received'},{'d-none' : index !== counter}]"
+                    :class="[ message.status ,{'d-none' : index !== counter}]"
                      class="rounded-3 p-3 position-relative">
                         <span>
                             {{message.message}}
